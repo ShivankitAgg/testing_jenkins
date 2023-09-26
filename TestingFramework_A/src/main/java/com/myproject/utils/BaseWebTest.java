@@ -30,7 +30,9 @@ public class BaseWebTest {
 		prop = new Properties();
 		FileInputStream fis = null;
 		try {
-			fis = new FileInputStream("F:\\feb2022\\TestingFramework_A\\Propertyfile.properties");
+			String path = System.getProperty("user.dir");
+			String otherPath= path + "\\TestingFramework_A\\Propertyfile.properties";
+			fis = new FileInputStream(otherPath);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
